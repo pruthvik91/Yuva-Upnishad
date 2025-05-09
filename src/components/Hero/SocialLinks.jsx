@@ -5,31 +5,31 @@ const socialLinks = [
     id: 'youtube',
     icon: "/icons/youtube.svg",
     color: '#FF0000',
-    link: 'https://youtube.com'
+    link: 'https://youtube.com/playlist?list=PL_L1pBrLbhPezfUtygVKSbgdyl4pUW2x-&si=kV7T5LD7sTJ8luYZ'
   },
   {
     id: 'telegram',
     icon: "/icons/telegram.svg",
     color: '#0088cc',
-    link: 'https://t.me/yuvaupnishad'
+    link: 'http://t.me/YuvaUpnishadFoundation'
   },
   {
     id: 'instagram',
     icon: "/icons/instagram.svg",
     color: '#E1306C',
-    link: 'https://instagram.com/yuvaupnishad'
+    link: 'https://www.instagram.com/yuvaupnishadpublication/'
   },
   {
     id: 'facebook',
     icon: "/icons/facebook.svg",
     color: '#1877F2',
-    link: 'https://facebook.com/yuvaupnishad'
+    link: 'https://www.facebook.com/yuvaupnishadfoundation'
   },
   {
     id: 'whatsapp',
     icon: "/icons/whatsapp.svg",
     color: '#25D366',
-    link: 'https://wa.me/9904439298'
+    link: 'https://wa.me/+919909449289'
   }
 ];
 
