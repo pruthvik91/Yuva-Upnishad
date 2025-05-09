@@ -31,14 +31,16 @@ const Footer = () => {
             <li>
               <img src="/icons/map-marker.svg" alt="Location" className="contact-icon" />
               <address>
-                2nd Floor, Shilp Shopping Centre,<br />
-                Near Moti Mahal Hotel, Maninagar,<br />
-                Ahmedabad, Gujarat 395009
+                2nd Floor, Ankur Shopping Centre,,<br />
+                Opp. Dev Oil Mill, Rly. Stn.,<br/>
+                Varachha Society,<br />
+                Maruti Chowk Road, Adajan, Surat,<br />
+                Gujarat 395009,
               </address>
             </li>
             <li>
               <img src="/icons/contact.svg" alt="Location" className="contact-icon" />
-              <a href="tel:9904439298">99044 39298</a>
+              <a href="tel:9909449289">+91 99094 49289</a>
             </li>
             <li>
               <img src="/icons/envelop.svg" alt="Location" className="contact-icon" />
