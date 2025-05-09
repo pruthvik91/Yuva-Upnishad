@@ -31,11 +31,10 @@ const Footer = () => {
             <li>
               <img src="/icons/map-marker.svg" alt="Location" className="contact-icon" />
               <address>
-                2nd Floor, Ankur Shopping Centre,,<br />
-                Opp. Dev Oil Mill, Rly. Stn.,<br/>
-                Varachha Society,<br />
-                Maruti Chowk Road, Adajan, Surat,<br />
-                Gujarat 395009,
+                2nd Floor, Ankur Shopping Centre,<br/>
+                Gujarat Gas Cir, opp. Vijay Dairy,<br/>
+                Maitry Society, Muktanand Nagar,<br/>
+                Adajan, Surat, Gujarat 395009
               </address>
             </li>
             <li>

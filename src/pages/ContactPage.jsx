@@ -115,10 +115,10 @@ const ContactPage = () => {
             alt="maps" 
             className="g-map contactpage-icon"
           /></div>
-          <p>2nd Floor, Ankur Shopping Centre,<br />
-             Opp. Dev Oil Mill, Rly. Stn., Varachha Society,<br />
-             Maruti Chowk Road, Adajan, Surat,<br />
-             Gujarat 395009</p>
+          <p> 2nd Floor, Ankur Shopping Centre,<br/>
+                Gujarat Gas Cir, opp. Vijay Dairy,<br/>
+                Maitry Society, Muktanand Nagar,<br/>
+                Adajan, Surat, Gujarat 395009</p>
         </div>
         <div className="info-item">
           <div className="info-icon phone"><img 
