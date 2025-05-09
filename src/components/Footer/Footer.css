@@ -16,6 +16,7 @@
 
 .footer-container {
   display: grid;
+  background-color: rgba(0, 0, 0, 0.2);
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 32px;
   padding: 40px 16px !important;
