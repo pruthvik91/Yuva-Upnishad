@@ -1,0 +1,165 @@
+.footer {
+  background-color: #1D3753;
+  color: var(--white);
+  padding-top: 24px;
+  position: relative;
+}
+
+.footer-top {
+  height: 28px;
+  background-color: var(--accent-orange);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  padding: 40px 16px !important;
+}
+
+.footer-section {
+  margin-bottom: 32px;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-orange);
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--white);
+  opacity: 0.9;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  padding-left: 4px;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.f-contact-info {
+  list-style: none;
+}
+
+.f-contact-info li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.contact-icon {
+  color: #93C5FD;
+  margin-right: 12px;
+  min-width: 16px;
+  margin-top: 4px;
+}
+
+.f-contact-info address,
+.f-contact-info a {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.f-contact-info a:hover {
+  opacity: 1;
+}
+
+.working-hours {
+  list-style: none;
+}
+
+.working-hours li {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.day {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.hours {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 16px 0;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+}
+.footer-logo-image{
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .footer-section {
+    margin-bottom: 24px;
+  }
+  
+  .footer-title {
+    font-size: 16px;
+  }
+}

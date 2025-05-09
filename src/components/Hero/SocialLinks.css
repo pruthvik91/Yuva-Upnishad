@@ -1,0 +1,47 @@
+.social-links {
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+  background: white;
+  border-top-right-radius:30px ;
+  border-bottom-right-radius:30px ;
+  padding:50px 20px ;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.social-icon {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+}

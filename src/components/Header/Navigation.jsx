@@ -1,0 +1,29 @@
+import './Navigation.css';
+
+const navigationLinks = [
+  { id: 1, name: 'Home', url: '/' },
+  { id: 2, name: 'About Us', url: '/about' },
+  { id: 3, name: 'Contact us', url: '/contact' }
+];
+
+const Navigation = ({ isMenuOpen, closeMenu }) => {
+  return (
+    <nav className={`navigation ${isMenuOpen ? 'open' : ''}`}>
+      <ul className="nav-list">
+        {navigationLinks.map((link) => (
+          <li key={link.id} className="nav-item">
+            <a 
+              href={link.url} 
+              className="nav-link" 
+              onClick={closeMenu}
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+export default Navigation;
