@@ -14,6 +14,10 @@ main {
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: 'Roboto', 'Inter', system-ui, sans-serif;
+}
+
 
 /* Animation keyframes */
 @keyframes fadeIn {
