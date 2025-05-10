@@ -18,11 +18,12 @@ const Hero = () => {
       <SocialLinks />
       <div className="hero-content">
         <div className="text-content">
-          <h1 className="hero-title">
-            Publisher of<br />
-            All Competitive<br />
-            Exam Books
-          </h1>
+         <h1 className="hero-title">
+  <div className="line line1">Publisher of</div>
+  <div className="line line2">All Competitive</div>
+  <div className="line line3">Exam Books</div>
+</h1>
+
           <p className="hero-subtitle">
             The most widely read and Popular Publication in<br />
             Gujarat for Competitive examinations.

@@ -7,36 +7,47 @@ import Timeline from '../Timeline';
 const MainContent = () => {
   return (
     <>
-   <section className="expertise-section hidden-element">
+   <section className="expertise-section hidden-element" data-aos="fade-up">
         <h2>Our Expertise</h2>
         <p className="section-intro">
           Yuva Upnishad Publication is dedicated to empowering aspirants preparing for a broad spectrum of state and central government competitive examinations. With a profound understanding of examination patterns and evolving syllabi, we provide high-quality, exam-oriented study materials in both Gujarati and English.
         </p>
         
         <div className="expertise-grid">
-          <ExpertiseCard 
-            title="UPSC & GPSC"
-            description="Comprehensive materials for Civil Services Examinations at both national and state levels."
+            <ExpertiseCard 
+            title="UPSC"
+            description="Comprehensive preparation for premier civil services: IAS, IPS, IFS, IRS, IES — empowering future nation-builders."
+            icon="/icons/judge.svg"
+            />
+            <ExpertiseCard 
+            title="GPSC"
+            description="Expert coaching for Gujarat's elite positions: Class 1/2, PI, ACF, RFO, TDO, Dy. SO, Dy. Mamlatdar, STI, and more."
             icon="/icons/books.svg"
-          />
-          <ExpertiseCard 
-            title="SSC & Banking"
-            description="Specialized resources for Staff Selection Commission and Banking entrance examinations."
+            />
+            <ExpertiseCard 
+            title="Class 3 Exams"
+            description="Thorough guidance for CCE (Group A & B), PSI, ASI, IO, Constable, Clerk (Binsachivalaya, VMC, Jr/Sr), Talati, Mukhya Sevika, Gram Sevak, Forest Guard, and TET/TAT/HTAT."
+            icon="/icons/id-card.svg"
+            />
+            <ExpertiseCard 
+            title="Bank"
+            description="Focused training for banking careers: IBPS PO/Clerk, SBI PO/Clerk, RRB Clerk, and RBI Assistant roles."
             icon="/icons/bank.svg"
-          />
-          <ExpertiseCard 
-            title="Police & Judicial"
-            description="Tailored study guides for PSI/ASI, Police Constable, and High Court examinations."
-            icon="/icons/policeman.svg"
-          />
-          <ExpertiseCard 
-            title="Teaching & Railway"
-            description="Expert materials for TET-TAT and Railway recruitment examinations."
-            icon="/icons/teacher.svg"
-          />
+            />
+            <ExpertiseCard 
+            title="SSC"
+            description="Structured courses for SSC CGL, CHSL, and MTS — opening doors to prestigious central government jobs."
+            icon="/icons/briefcase.svg"
+            />
+            <ExpertiseCard 
+            title="RRB"
+            description="Targeted preparation for railway exams including NTPC, Loco Pilot, and Group-D, tailored for aspirants nationwide."
+            icon="/icons/train.svg"
+            />
         </div>
+
       </section>
-<section className="mission-section hidden-element">
+    <section className="mission-section hidden-element" data-aos="fade-up">
         <div className="mission-section-container section-container reverse">
           <div className="section-content">
             <h2>Our Mission</h2>
@@ -63,7 +74,7 @@ const MainContent = () => {
       </section>
      
 
-      <section className="values-section hidden-element">
+      <section className="values-section hidden-element" data-aos="fade-up">
         <div className="section-container our-values">
           <div className="section-image our-values-img">
             <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team collaboration" />
@@ -91,7 +102,7 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-       <section className="offerings-section">
+       <section className="offerings-section" data-aos="fade-up">
         <div className="section-container">
           <h2>Our Offerings</h2>
           <div className="offerings-grid">
@@ -113,11 +124,11 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-        <section className="journey-section hidden-element">
+        <section className="journey-section hidden-element" data-aos="fade-up">
             <h2>Our Journey</h2>
             <Timeline />
         </section>
-      <section className="availability-section">
+      <section className="availability-section" data-aos="fade-up">
         <div className="section-container">
           <h2>Availability</h2>
           <div className="availability-content">
