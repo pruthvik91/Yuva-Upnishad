@@ -1,8 +1,10 @@
 import SocialLinks from './SocialLinks';
+import MainContent from './MainContent';
 import './Hero.css';
 
 const Hero = () => {
   return (
+    <>
     <section className="hero">
       <div className="hero-background">
         <div className="books-overlay">
@@ -28,6 +30,8 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    <MainContent />
+    </>
   );
 };
 

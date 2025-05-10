@@ -8,6 +8,8 @@
   border-top-right-radius:30px ;
   border-bottom-right-radius:30px ;
   padding:50px 20px ;
+  position: absolute;
+  top:50%;
 }
 
 .social-link {
@@ -18,7 +20,6 @@
   height: 40px;
   color: white;
   transition: all 0.3s ease;
-  position: relative;
 }
 
 .social-link:hover .social-icon {

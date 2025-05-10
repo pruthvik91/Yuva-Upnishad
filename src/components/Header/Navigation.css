@@ -1,5 +1,6 @@
 .navigation {
   transition: all 0.3s ease;
+  margin-right: 160px;
 }
 
 .nav-list {
