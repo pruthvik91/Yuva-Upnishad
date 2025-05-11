@@ -1,8 +1,11 @@
-/* .slider-main-container {
+
+.slider-main-container {
+  margin-top:100px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+  flex-direction:row-reverse ;
 }
 
 .hero-carousel {
@@ -27,21 +30,21 @@
   color: var(--secondary-dark);
 }
 
-.line {
+.slider-main-container .line {
   display: block;
   margin-bottom: 0.5rem;
 }
 
-.line1 {
+.slider-main-container .line1 {
   font-size: 2.5rem;
   color: var(--primary-color);
 }
 
-.line2, .line3 {
+.slider-main-container .line2,.slider-main-container  .line3 {
   font-size: 3.5rem;
 }
 
-.hero-subtitle {
+.slider-main-container .hero-subtitle {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--text-dark);
@@ -230,4 +233,4 @@
   .hero-subtitle {
     font-size: 1rem;
   }
-} */
+}

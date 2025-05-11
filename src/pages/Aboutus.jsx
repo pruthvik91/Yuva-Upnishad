@@ -5,6 +5,12 @@ const AboutUs = () => {
   return (
     <div className='about-container main-container'>
    <section className="aboutus" data-aos="fade-up">
+  <h2 className="section-title">About Us</h2>
+  <div className="about-content">
+    <p>Yuva Upanishad Publication is a prominent publication that publishes highly useful books for competitive exam preparation, alongside classroom education. </p>
+      <p>Since 2016, it has been publishing books related to competitive exams, starting with the 'Current Affairs' series and expanding to over 100 books in various subjects.</p>
+  </div>
+</section><section className="aboutus" data-aos="fade-up">
   <h2 className="section-title">Meet the Minds Behind the Pages</h2>
   <div className="about-content">
     <p><strong>Publication team :</strong></p>

@@ -55,6 +55,7 @@ if (loading) {
             <Route path="/gallary" element={<Gallary />} />
             
             <Route path="/contact" element={<Contact />} />
+            <Route path="/hero" element={<HeroBookCarousel />} />
           </Routes>
         </main>
         <Footer />
