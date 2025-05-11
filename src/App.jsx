@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer';
 import Loader from './components/Loader/Loader';
 import Careers from './pages/Careers';
 import Gallary from './pages/Gallery';
-import AboutUs from './pages/AboutUs';
+import AboutUs from './pages/Aboutus';
 import Contact from './pages/ContactPage';
 
 import 'aos/dist/aos.css';
