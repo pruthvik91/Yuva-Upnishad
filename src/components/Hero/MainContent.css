@@ -298,6 +298,19 @@ section h2::after {
   .offering-card {
     padding: 25px 20px;
   }
+  .section-container.our-values,
+  .mission-section-container,
+  .mission-cards{
+    display: flex;
+    flex-direction:column;
+    
+  }
+  .section-container.our-values{
+    flex-direction:column-reverse ;
+  }
+  .mission-card{
+      width: 100%; 
+    }
 }
 
 @media (max-width: 480px) {

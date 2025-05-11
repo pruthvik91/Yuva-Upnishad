@@ -51,8 +51,8 @@
     font-size: 14px;
 }
 
-.form-group input,
-.form-group textarea {
+.contact-container .form-group input,
+.contact-container .form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -62,7 +62,7 @@
     font-size: 14px;
 }
 
-.form-group input:focus-visible, .form-group textarea:focus-visible {
+.contact-container .form-group input:focus-visible,.contact-container .form-group textarea:focus-visible {
     outline: none !important;
 }
 
@@ -76,7 +76,7 @@
     min-height: 100px;
 }
 
-.submit-button {
+.contact-container .submit-button {
     background: #e76f51;
     color: white;
     padding: 12px 30px;

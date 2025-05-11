@@ -1,8 +1,6 @@
 import './MainContent.css';
 import { Book, Award, BookOpen, GraduationCap , Heart, Target, Users } from 'lucide-react';
-import {  } from 'lucide-react';
 import ExpertiseCard from '../ExpertiseCard';
-import Timeline from '../Timeline';
 
 const MainContent = () => {
   return (
@@ -16,33 +14,43 @@ const MainContent = () => {
         <div className="expertise-grid">
             <ExpertiseCard 
             title="UPSC"
-            description="Comprehensive preparation for premier civil services: IAS, IPS, IFS, IRS, IES — empowering future nation-builders."
+            description="Civil Services: IAS, IPS, IFS, IRS, IES etc."
             icon="/icons/judge.svg"
             />
             <ExpertiseCard 
             title="GPSC"
-            description="Expert coaching for Gujarat's elite positions: Class 1/2, PI, ACF, RFO, TDO, Dy. SO, Dy. Mamlatdar, STI, and more."
+            description="Class 1/2, Dy. SO, Dy. Mamlatdar, STI, PI, ACF, RFO, TDO, Civil, Mechanical and more."
             icon="/icons/books.svg"
             />
             <ExpertiseCard 
             title="Class 3 Exams"
-            description="Thorough guidance for CCE (Group A & B), PSI, ASI, IO, Constable, Clerk (Binsachivalaya, VMC, Jr/Sr), Talati, Mukhya Sevika, Gram Sevak, Forest Guard, and TET/TAT/HTAT."
+            description="CCE (Group A & B), PSI, ASI, Constable, Clerk (Head Clerk, Senior Clerk, Junior Clerk, Binsachivalay, Municipal Corporation), Talati, Mukhya Sevika, Gram Sevak, Forest Guard, TET/TAT/HTAT and Conductor."
             icon="/icons/id-card.svg"
             />
             <ExpertiseCard 
+            title="Judiciary"
+            description="High Court Dy.So.,  Court Assistant, Bailiff, Peon, Driver  and more."
+            icon="/icons/bank.svg"
+            /> 
+            <ExpertiseCard 
             title="Bank"
-            description="Focused training for banking careers: IBPS PO/Clerk, SBI PO/Clerk, RRB Clerk, and RBI Assistant roles."
+            description="IBPS PO/Clerk, SBI PO/Clerk, RRB Clerk, and RBI Assistant roles."
             icon="/icons/bank.svg"
             />
             <ExpertiseCard 
             title="SSC"
-            description="Structured courses for SSC CGL, CHSL, and MTS — opening doors to prestigious central government jobs."
+            description="SSC CGL, CHSL, and MTS"
             icon="/icons/briefcase.svg"
             />
             <ExpertiseCard 
             title="RRB"
-            description="Targeted preparation for railway exams including NTPC, Loco Pilot, and Group-D, tailored for aspirants nationwide."
+            description="NTPC, Loco Pilot, and Group-D"
             icon="/icons/train.svg"
+            />
+            <ExpertiseCard 
+            title="Others"
+            description="MPHW, FHW, UGC-NET and SLET"
+            icon="/icons/books.svg"
             />
         </div>
 
@@ -124,10 +132,7 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-        <section className="journey-section hidden-element" data-aos="fade-up">
-            <h2>Our Journey</h2>
-            <Timeline />
-        </section>
+        
       <section className="availability-section" data-aos="fade-up">
         <div className="section-container">
           <h2>Availability</h2>
@@ -139,7 +144,7 @@ const MainContent = () => {
                 <li>Local bookstores</li>
                 <li>Our institute branches</li>
               </ul>
-              <p className="highlight">Our books are ranked among the top in the competitive exam category on Amazon, offering logical analysis and covering important concepts relevant to changing exam patterns.</p>
+              <p className="highlight">Our aim is to make exam preparation easier, smarter, and more accessible for each and every student. Students can prepare effectively and succeed in competitive exams.</p>
             </div>
             <div className="availability-image">
               <img src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Books on display" />

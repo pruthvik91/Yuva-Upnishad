@@ -1,3 +1,4 @@
+/* Base Styles */
 .navigation {
   transition: all 0.3s ease;
   margin-right: 160px;
@@ -41,32 +42,63 @@
   width: 100%;
 }
 
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+}
+
+/* Close button inside nav */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .navigation {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
     height: 100vh;
     background-color: var(--white);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     padding: 80px 24px 32px;
     overflow-y: auto;
     z-index: 1000;
+    transition: right 0.3s ease;
   }
-  
+
   .navigation.open {
     right: 0;
+    width: 200px;
+    margin: 0;
   }
-  
+
   .nav-list {
     flex-direction: column;
     gap: 16px;
   }
-  
+
   .nav-link {
     font-size: 18px;
     padding: 12px 0;
+    display: block;
+  }
+
+  .hamburger {
     display: block;
   }
 }

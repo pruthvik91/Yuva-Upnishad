@@ -25,7 +25,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container main-container">
       <div className="contact-content">
         <div className="contact-form-section">
         <div className="contact-left-line"></div>

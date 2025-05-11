@@ -1,15 +1,18 @@
 import { useEffect,useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AOS from 'aos';
 
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
+import HeroBookCarousel from './components/Hero/HeroSlider';
 import Footer from './components/Footer/Footer';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-// import About from './pages/About';
-import Contact from './pages/ContactPage';
 import Loader from './components/Loader/Loader';
+import Careers from './pages/Careers';
+import Gallary from './pages/Gallery';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/ContactPage';
 
+import 'aos/dist/aos.css';
 import './App.css';
 
 function App() {
@@ -23,7 +26,7 @@ function App() {
       delay: 100, // Delay before animation starts
     });
     document.title = 'Yuva Upnishad Publication - Competitive Exam Books';
-   const minLoadTime = new Promise(resolve => setTimeout(resolve, 1000)); // minimum 1 sec
+   const minLoadTime = new Promise(resolve => setTimeout(resolve, 400)); // minimum 1 sec
   const pageLoaded = new Promise(resolve => {
     if (document.readyState === 'complete') {
       resolve();
@@ -47,8 +50,10 @@ if (loading) {
         <main>
           <Routes>
             <Route path="/" element={<Hero />} />
-            <Route path="/about" element={""} />
-            {/* <About /> */}
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/gallary" element={<Gallary />} />
+            
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

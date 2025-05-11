@@ -50,5 +50,5 @@
 .expertise-card p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--text-dark);
 }
