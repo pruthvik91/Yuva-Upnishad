@@ -117,7 +117,7 @@ const MainContent = () => {
             <div className="offering-card">
               <BookOpen className="offering-icon" />
               <h3>Comprehensive Study Materials</h3>
-              <p>Our publications cover subjects including Indian Polity, History, Culture, Geography, Economics, and more, based on trusted sources like GCERT and NCERT.</p>
+              <p>Our publication cover various subjects including Indian Polity, History, Culture, Geography, Economics, and more, based on trusted sources like GCERT, NCERT, NIOS, Tamilnadu Education Board curricula, Gujarat Granth Nirman Board, Authentic and Official websites</p>
             </div>
             <div className="offering-card">
               <Book className="offering-icon" />
