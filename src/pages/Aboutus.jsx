@@ -1,5 +1,5 @@
 import Timeline from '../components/Timeline';
-import './Aboutus.css';
+import './Aboutus.css'; 
 
 const AboutUs = () => {
   return (
