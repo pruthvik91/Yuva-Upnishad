@@ -2,11 +2,31 @@ import React, { useState,useEffect,useRef } from 'react';
 import './SocialLinks.css';
 
 const socialLinksData = [
-  { id: 'youtube', icon: '/icons/youtube.svg', link: 'https://youtube.com/...' },
-  { id: 'telegram', icon: '/icons/telegram.svg', link: 'http://t.me/...' },
-  { id: 'instagram', icon: '/icons/instagram.svg', link: 'https://www.instagram.com/...' },
-  { id: 'facebook', icon: '/icons/facebook.svg', link: 'https://www.facebook.com/...' },
-  { id: 'whatsapp', icon: '/icons/whatsapp.svg', link: 'https://wa.me/...' }
+  { 
+    id: 'youtube',
+    icon: "/icons/youtube.svg",
+    link: 'https://youtube.com/playlist?list=PL_L1pBrLbhPezfUtygVKSbgdyl4pUW2x-&si=kV7T5LD7sTJ8luYZ'
+  },
+  {
+    id: 'telegram',
+    icon: "/icons/telegram.svg",
+    link: 'http://t.me/YuvaUpnishadFoundation'
+  },
+  {
+    id: 'instagram',
+    icon: "/icons/instagram.svg",
+    link: 'https://www.instagram.com/yuvaupnishadpublication/'
+  },
+  {
+    id: 'facebook',
+    icon: "/icons/facebook.svg",
+    link: 'https://www.facebook.com/yuvaupnishadfoundation'
+  },
+  {
+    id: 'whatsapp',
+    icon: "/icons/whatsapp.svg",
+    link: 'https://wa.me/+919909449289'
+  }
 ];
 
 const SocialLinks = () => {
