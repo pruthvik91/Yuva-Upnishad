@@ -24,7 +24,7 @@ const MainContent = () => {
             />
             <ExpertiseCard 
             title="Class 3 Exams"
-            description="CCE (Group A & B), PSI, ASI, Constable, Clerk (Head Clerk, Senior Clerk, Junior Clerk, Binsachivalay, Municipal Corporation), Talati, Mukhya Sevika, Gram Sevak, Forest Guard, TET/TAT/HTAT and Conductor."
+            description="UGC-NET and SLET, TET/TAT/HTA, Mukhya Sevika, MPHW, FHW, Gram Sevak, and Conductor."
             icon="/icons/id-card.svg"
             />
             <ExpertiseCard 
