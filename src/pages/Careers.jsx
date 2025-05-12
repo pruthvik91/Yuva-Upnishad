@@ -20,8 +20,8 @@ const Careers = () => {
           </div>
           <div className="benefit-card">
             <Coffee className="benefit-icon" />
-            <h3>Growth Environment</h3>
-            <p>Regular training sessions, workshops, and opportunities for professional development.</p>
+            <h3>Learning with earning</h3>
+            <p>A content developer can revise and learn various subjects on their journey of becoming government officers. Most of our content developers cracked various exams, and they are at designated posts in government.</p>
           </div>
           <div className="benefit-card">
             <Users className="benefit-icon" />

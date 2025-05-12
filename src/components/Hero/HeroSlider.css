@@ -9,8 +9,8 @@
 }
 
 .hero-carousel {
-  flex: 1;
   padding: 2rem;
+  width: 60%;
 }
 
 .hero-information {

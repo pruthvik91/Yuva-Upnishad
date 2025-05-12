@@ -1,10 +1,13 @@
 import './MainContent.css';
 import { Book, Award, BookOpen, GraduationCap , Heart, Target, Users } from 'lucide-react';
 import ExpertiseCard from '../ExpertiseCard';
+import Achievements from '../Achievements/Achievements';
+
 
 const MainContent = () => {
   return (
     <>
+    <Achievements />
    <section className="expertise-section hidden-element" data-aos="fade-up">
         <h2>Our Expertise</h2>
         <p className="section-intro">
@@ -24,7 +27,7 @@ const MainContent = () => {
             />
             <ExpertiseCard 
             title="Class 3 Exams"
-            description="UGC-NET and SLET, TET/TAT/HTA, Mukhya Sevika, MPHW, FHW, Gram Sevak, and Conductor."
+            description="CCE (Group A & B), PSI, ASI, Constable, Clerk (Head Clerk, Senior Clerk, Junior Clerk, Binsachivalay, Municipal Corporation), Talati and Forest Guard"
             icon="/icons/id-card.svg"
             />
             <ExpertiseCard 
@@ -49,7 +52,7 @@ const MainContent = () => {
             />
             <ExpertiseCard 
             title="Others"
-            description="MPHW, FHW, UGC-NET and SLET"
+            description="UGC-NET and SLET, TET/TAT/HTA, Mukhya Sevika, MPHW, FHW, Gram Sevak, and Conductor."
             icon="/icons/books.svg"
             />
         </div>
@@ -140,9 +143,8 @@ const MainContent = () => {
             <div className="availability-text">
               <p>Our books are widely available across Gujarat and can be purchased through:</p>
               <ul>
-                <li>E-marketplace platforms (Flipkart, Amazon)</li>
-                <li>Local bookstores</li>
-                <li>Our institute branches</li>
+                <li>E-commerce platforms (Flipkart, Amazon) </li>
+                <li>Local bookstores and educational outlets</li>
               </ul>
               <p className="highlight">Our aim is to make exam preparation easier, smarter, and more accessible for each and every student. Students can prepare effectively and succeed in competitive exams.</p>
             </div>

@@ -34,7 +34,7 @@
 }
 
 .hero-content {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -129,11 +129,11 @@
 }
 
 .hero-content {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
-  top: 50%;
+  /* top: 50%; */
   font-weight: 800;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   background-color: #183b63;
   padding: 3rem;
   max-width: 40%;
