@@ -145,6 +145,7 @@ const MainContent = () => {
               <ul>
                 <li>E-commerce platforms (Flipkart, Amazon) </li>
                 <li>Local bookstores and educational outlets</li>
+                <li>Our institute branches</li>
               </ul>
               <p className="highlight">Our aim is to make exam preparation easier, smarter, and more accessible for each and every student. Students can prepare effectively and succeed in competitive exams.</p>
             </div>
