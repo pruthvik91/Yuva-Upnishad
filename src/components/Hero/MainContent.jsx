@@ -75,7 +75,7 @@ const MainContent = () => {
               </div>
             </div>
             <p className="mission-text">
-              We are committed to continuously evolving our content to reflect the latest examination patterns, curriculum changes, and pedagogical innovations, ensuring our resources remain relevant, comprehensive, and effective.
+              We are committed to continuously evolving our books to reflect the latest examination patterns and pedagogical innovations, ensuring our resources remain relevant, comprehensive, and effective.
             </p>
           </div>
           <div className="mission-section-image">

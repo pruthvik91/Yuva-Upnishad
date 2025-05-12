@@ -42,19 +42,10 @@ const AboutUs = () => {
           <p>
             The management department oversees workflow, smooth coordination,
             and timely production, ensuring every book is delivered on time and
-            to the highest standard.
+            to the highest standard.
           </p>
         </div>
       </section>
-      <section className="aboutus" data-aos="fade-up">
-        <h2 className="section-title">Our Mission</h2>
-        <div className="about-content">
-          <p>
-            We are committed to continuously evolving our books to reflect the latest examination patterns and pedagogical innovations, ensuring our resources remain relevant, comprehensive,and effective.
-          </p>
-        </div>
-      </section>
-
       {/* <section className="journey-section hidden-element" data-aos="fade-up">
       <h2>Our Journey</h2>
       <Timeline />
