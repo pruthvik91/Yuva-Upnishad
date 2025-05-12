@@ -4,7 +4,7 @@ import './Aboutus.css';
 const AboutUs = () => {
   return (
     <div className="about-container main-container">
-      <section className="aboutus" data-aos="fade-up">
+      <section className="aboutus" data-aos="fade-right">
         <h2 className="section-title">About Us</h2>
         <div className="about-content">
           <p>
@@ -19,7 +19,7 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-      <section className="aboutus" data-aos="fade-up">
+      <section className="aboutus" data-aos="fade-left">
         <h2 className="section-title">Meet the Minds Behind the Pages</h2>
         <div className="about-content">
           <p>

@@ -1,42 +1,85 @@
-.about-container { 
+/* Container */
+.about-container {
   max-width: 1200px;
   margin: 90px auto;
   padding: 40px 20px;
-}
-
-.aboutus {
-  /* background-color: #fdfdfd; */
-  padding: 60px 30px;
-  /* border-radius: 12px; */
-  /* box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); */
-  margin-bottom: 40px;
-}
-
-.section-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #222;
-  text-align: center;
-  margin-bottom: 24px;
   position: relative;
 }
 
-.section-title::after {
-  content: '';
-  width: 60px;
-  height: 3px;
-  background: var(--accent-color);
-  display: block;
-  margin: 12px auto 0;
-  border-radius: 2px;
+/* Section Card */
+.aboutus {
+  position: relative;
+  background-color: #ffffff;
+  padding: 60px 40px 60px 60px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 48px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  border-left: 6px solid transparent;
 }
 
+.aboutus:hover {
+  transform: translateY(-4px);
+}
+
+/* Decorative gradient side line */
+.aboutus::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 5px;
+  height: calc(100% - 60px);
+  background: linear-gradient(to bottom, var(--accent-color), #ffbb33);
+  border-radius: 4px;
+}
+
+/* Heading */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 28px;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+/* Animated underline */
+.section-title::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  background: var(--accent-color);
+  display: block;
+  margin: 16px auto 0;
+  border-radius: 2px;
+  animation: underlineGrow 1s forwards;
+}
+
+@keyframes underlineGrow {
+  to {
+    width: 80px;
+  }
+}
+
+/* Content */
 .about-content {
   max-width: 900px;
   margin: 0 auto;
-  font-size: 16px;
-  color: #444;
-  line-height: 1.8;
-  padding: 0 10px;
+  font-size: 17px;
+  color: #333;
+  line-height: 1.9;
+  padding: 0 15px;
   text-align: justify;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.about-content strong {
+  font-weight: 600;
+  color: #2d2d2d;
 }
