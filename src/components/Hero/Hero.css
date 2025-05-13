@@ -68,7 +68,7 @@
 }
 
 @media (max-width: 1200px) {
-  .text-content {
+  .herp-content {
     padding: 40px;
   }
   
@@ -84,9 +84,10 @@
     align-items: center;
     min-height: 100vh;
     padding-top: 80px;
+    width: 100% !important;
   }
 
-  .text-content {
+  .herp-content {
     position: relative;
     right: auto;
     top: auto;
@@ -111,7 +112,7 @@
 }
 
 @media (max-width: 480px) {
-  .text-content {
+  .herp-content {
     padding: 24px;
   }
   
@@ -122,10 +123,11 @@
 .hero {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
   padding: 4rem 0;
-  height:700px;
+
 }
 
 .hero-content {
@@ -136,7 +138,8 @@
   transform: translateY(10%);
   background-color: #183b63;
   padding: 3rem;
-  max-width: 40%;
+  max-width: 100%;
+  width: 40%;
   color: white;
   z-index: 2;
   height: auto;
