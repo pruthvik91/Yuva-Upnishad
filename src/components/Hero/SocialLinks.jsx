@@ -42,7 +42,7 @@ const SocialLinks = () => {
 
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("scroll", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside),document.removeEventListener("scroll", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
    }, []);
   return (
     <div className={`social-links-wrapper ${open ? 'open' : ''}`} ref={wrapperRef}>
