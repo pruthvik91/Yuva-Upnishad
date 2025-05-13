@@ -42,6 +42,16 @@
   width: 100%;
 }
 
+/* Active Link Styles */
+.nav-link.active {
+  color: var(--primary-blue); /* Change color of active link */
+  font-weight: 700; /* Bold the active link */
+}
+
+.nav-link.active::after {
+  width: 100%; /* Show underline on active link */
+}
+
 /* Hamburger Menu Button */
 .hamburger {
   display: none;

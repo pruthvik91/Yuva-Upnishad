@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './Navigation.css';
 
 const navigationLinks = [
@@ -5,11 +6,16 @@ const navigationLinks = [
   { id: 2, name: 'About Us', url: '/about' },
   { id: 3, name: 'Contact us', url: '/contact' },
   { id: 4, name: 'Careers', url: '/careers' },
-  // { id: 3, name: 'Gallary', url: '/gallary' },
-  // { id: 6, name: 'Hero Section', url: '/hero' }
 ];
 
 const Navigation = ({ isMenuOpen, closeMenu }) => {
+  const [activeLink, setActiveLink] = useState(window.location.pathname);
+
+  const handleLinkClick = (url) => {
+    setActiveLink(url);
+    closeMenu();
+  };
+
   return (
     <nav className={`navigation ${isMenuOpen ? 'open' : ''}`}>
       <ul className="nav-list">
@@ -17,8 +23,8 @@ const Navigation = ({ isMenuOpen, closeMenu }) => {
           <li key={link.id} className="nav-item">
             <a 
               href={link.url} 
-              className="nav-link" 
-              onClick={closeMenu}
+              className={`nav-link ${activeLink === link.url ? 'active' : ''}`} 
+              onClick={() => handleLinkClick(link.url)}
             >
               {link.name}
             </a>

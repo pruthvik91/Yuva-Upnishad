@@ -68,31 +68,35 @@ const Achievements = () => {
 
   const Counter = ({ number, plus, index }) => {
   const [count, setCount] = useState(0);
+  const startTimeRef = useRef(null);
 
   useEffect(() => {
-    // Only animate if the section is visible, it's one of the first two, and not yet animated
     if (!isVisible || index >= 2 || hasAnimatedRef.current.has(index)) {
       setCount(number);
       return;
     }
 
-    let start = 0;
-    const end = parseInt(number);
     const duration = 2000;
-    const increment = end / (duration / 16);
+    const start = 0;
+    const end = number;
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-        hasAnimatedRef.current.add(index); // Mark as animated
+    const step = (timestamp) => {
+      if (!startTimeRef.current) startTimeRef.current = timestamp;
+      const progress = timestamp - startTimeRef.current;
+      const current = Math.min(start + (progress / duration) * end, end);
+      setCount(Math.floor(current));
+
+      if (progress < duration) {
+        requestAnimationFrame(step);
       } else {
-        setCount(Math.floor(start));
+        setCount(end);
+        hasAnimatedRef.current.add(index); // Mark as animated
       }
-    }, 16);
+    };
 
-    return () => clearInterval(timer);
+    const animationFrame = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(animationFrame);
   }, [isVisible, number, index]);
 
   return (
@@ -102,6 +106,7 @@ const Achievements = () => {
     </span>
   );
 };
+
 
 
   return (
