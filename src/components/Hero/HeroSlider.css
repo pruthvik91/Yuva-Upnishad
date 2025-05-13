@@ -140,7 +140,8 @@
 }
 
 .slider-btn:hover {
-  background: var(--primary-dark);
+  background-color: #e0e0e0; /* light grey on hover */
+  color: var(--primary-dark);
   transform: scale(1.1);
 }
 

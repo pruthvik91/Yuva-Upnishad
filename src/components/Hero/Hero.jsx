@@ -3,6 +3,7 @@ import MainContent from "./MainContent";
 import "./Hero.css";
 import "./HeroSlider.css";
 import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { allBooks } from "./Book";
 
 const Hero = () => {
@@ -18,7 +19,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
+    const interval = setInterval(nextSlide, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -58,12 +59,13 @@ const Hero = () => {
 
               <div className="slider-controls">
                 <button className="slider-btn" onClick={prevSlide}>
-                  ←
+                  <ChevronLeft size={24} />
                 </button>
                 <button className="slider-btn" onClick={nextSlide}>
-                  →
+                  <ChevronRight size={24} />
                 </button>
               </div>
+
             </div>
 
             {/* <div className={`book-info ${currentIndex === 0 ? "active" : ""}`}>
