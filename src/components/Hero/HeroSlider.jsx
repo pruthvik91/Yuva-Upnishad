@@ -15,7 +15,7 @@ const HeroBookCarousel = () => {
   }
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000)
+    const interval = setInterval(nextSlide, 1000)
     return () => clearInterval(interval)
   }, [])
 

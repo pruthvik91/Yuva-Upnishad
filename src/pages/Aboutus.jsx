@@ -23,9 +23,6 @@ const AboutUs = () => {
         <h2 className="section-title">Meet the Minds Behind the Pages</h2>
         <div className="about-content">
           <p>
-            <strong>Publication team :</strong>
-          </p>
-          <p>
             The Content Development Team at our publication house plays a
             critical role in maintaining academic integrity and relevance. With
             a focus on syllabus alignment, conceptual clarity, and quality

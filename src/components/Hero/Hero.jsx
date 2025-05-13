@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -66,11 +66,11 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className={`book-info ${currentIndex === 0 ? "active" : ""}`}>
+            {/* <div className={`book-info ${currentIndex === 0 ? "active" : ""}`}>
               <h2>{books[currentIndex].title}</h2>
               <p>{books[currentIndex].author}</p>
               <button className="btn btn-primary">Learn More</button>
-            </div>
+            </div> */}
           </div>
         </div>
         <SocialLinks />
