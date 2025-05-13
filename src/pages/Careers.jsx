@@ -1,8 +1,85 @@
+import {useState} from 'react';
 import {Heart, Coffee, Users, Zap, BookOpen, Trophy, Smile } from 'lucide-react';
+import 'react-toastify/dist/ReactToastify.css';
 import './Careers.css';
-
-
+import { toast } from 'react-toastify';
 const Careers = () => {
+  const [fileName, setFileName] = useState("");
+ const [loading, setLoading] = useState(false); // Add loading state
+ const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  // Handle input changes and update state
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+const handleFileChange = (e) => {
+  const file = e.target.files[0];
+  const validExtensions = ['.pdf', '.doc', '.docx']; // Allowed file extensions
+  const fileName = file.name.toLowerCase();
+  
+  // Check if file extension is valid
+  const isValidExtension = validExtensions.some(ext => fileName.endsWith(ext));
+  
+  if (file && isValidExtension) {
+    setFormData({ ...formData, resume: file });
+    setFileName(file.name);  // Store file name in the state
+  } else {
+    // Reset file input and show error message
+    e.target.value = null;
+    setFileName(""); // Clear file name in case of invalid file
+    alert('Please upload a valid PDF or Word document (DOC/DOCX).');
+  }
+};
+
+  // Handle form submission
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+setLoading(true); 
+  const formDataToSubmit = new FormData();
+  formDataToSubmit.append("fullName", formData.fullName);
+  formDataToSubmit.append("email", formData.email);
+  formDataToSubmit.append("phone", formData.phone);
+  formDataToSubmit.append("message", formData.message);
+  
+  // Append the resume file to FormData
+  if (formData.resume) {
+    formDataToSubmit.append("resume", formData.resume);  // 'resume' should match the field name in PHP
+  }
+
+  try {
+    const response = await fetch("http://localhost/yuva-Upnishad%2009/backend/api/careers.php", {
+      method: "POST",
+      body: formDataToSubmit,
+    });
+
+    const result = await response.json();
+    
+    if (result.status === "success") {
+      toast.success('Your application has been submitted successfully!');
+    } else {
+      toast.error('There was an issue with your submission. Please try again later.');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    toast.error('An error occurred. Please check your internet connection or try again later.');
+  }finally{
+    setLoading(false); 
+  }
+};
+
+
+
+  
+
   return (
     <div className="careers-container main-container">
       <section className="careers-hero">
@@ -76,18 +153,22 @@ We publish with purpose — empowering minds and protecting our planet.</p>
 
       <section className="application-section">
   <h2>Apply Now</h2>
-  <form className="application-form">
+  <form className="application-form" onSubmit={handleSubmit} encType="multipart/form-data">
     <div className="form-group">
       <label >Full Name</label>
-      <input type="text" id="fullName" name="fullName" required />
+      <input type="text" id="fullName" name="fullName" onChange={handleChange} required />
     </div>
     <div className="form-group">
       <label >Email</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" name="email" onChange={handleChange} required />
     </div>
+        <div className="form-group">
+    <label>Phone</label>
+    <input type="tel" id="phone" name="phone" onChange={handleChange} required />
+  </div>
      <div className="form-group">
       <label>Select Post</label>
-      <select id="post" name="post" required>
+      <select id="post" name="post" onChange={handleChange} required>
         <option value="">-- Select a Position --</option>
         <option value="frontend">Frontend Developer</option>
         <option value="backend">Backend Developer</option>
@@ -100,15 +181,20 @@ We publish with purpose — empowering minds and protecting our planet.</p>
       <label >Resume</label>
       <div className="file-input">
         <span>Upload Resume</span>
-        <input type="file" id="resume" name="resume" />
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" onChange={handleFileChange} required />
+         {fileName && <div>Selected file: {fileName}</div>}
       </div>
     </div>
     <div className="form-group">
       <label >Message</label>
-      <textarea id="message" rows="4"></textarea>
+      <textarea id="message" name="message" onChange={handleChange} rows="4" required></textarea>
     </div>
     <div className="form-actions">
-      <button type="submit" className="submit-button">Submit</button>
+      <button type="submit" className="submit-button" disabled={loading}> {loading ? (
+                <span>Submitting...</span> // Or you can use a spinner here
+              ) : (
+                'Submit'
+              )}</button>
     </div>
   </form>
 </section>

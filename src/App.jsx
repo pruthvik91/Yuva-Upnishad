@@ -11,7 +11,8 @@ import Careers from './pages/Careers';
 import Gallary from './pages/Gallery';
 import AboutUs from './pages/Aboutus';
 import Contact from './pages/ContactPage';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import 'aos/dist/aos.css';
 import './App.css';
 
@@ -47,6 +48,7 @@ if (loading) {
     <Router>
       <div className="app">
         <Header />
+        <ToastContainer />
         <main>
           <Routes>
             <Route path="/" element={<Hero />} />
@@ -60,6 +62,7 @@ if (loading) {
         </main>
         <Footer />
       </div>
+      
     </Router>
   );
 }

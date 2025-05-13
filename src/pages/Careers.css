@@ -52,7 +52,7 @@
 
 .search-bar input:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: #f97316;
   box-shadow: 0 0 0 2px rgba(231, 111, 81, 0.1);
 }
 
@@ -147,11 +147,11 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--accent-color);
+  color: #f97316;
 }
 
 .apply-button {
-  background: var(--accent-color);
+  background: #f97316;
   color: white;
   padding: 12px 30px;
   border: none;
@@ -224,7 +224,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: #f97316;
   box-shadow: 0 0 0 2px rgba(231, 111, 81, 0.1);
 }
 
@@ -241,7 +241,7 @@
 }
 
 .file-input:hover {
-  border-color: var(--accent-color);
+  border-color: #f97316;
 }
 
 .file-input input {
@@ -284,7 +284,7 @@
   padding: 12px 30px;
   border: none;
   border-radius: 6px;
-  background: var(--accent-color);
+  background: #f97316;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -314,7 +314,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+  background: linear-gradient(90deg, #f97316, var(--secondary-color));
   border-radius: 3px;
 }
 
@@ -359,7 +359,7 @@
 .benefit-icon {
   width: 48px;
   height: 48px;
-  color: var(--accent-color);
+  color: #f97316;
   margin-bottom: 20px;
   transition: transform 0.4s ease;
 }
@@ -407,7 +407,7 @@
   right: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+  background: linear-gradient(90deg, #f97316, var(--secondary-color));
   border-radius: 3px;
 }
 
@@ -436,7 +436,7 @@
 .culture-icon {
   width: 32px;
   height: 32px;
-  color: var(--accent-color);
+  color: #f97316;
   flex-shrink: 0;
 }
 
@@ -523,7 +523,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: #f97316;
   box-shadow: 0 0 0 2px rgba(231, 111, 81, 0.1);
 }
 
@@ -540,7 +540,7 @@
 }
 
 .file-input:hover {
-  border-color: var(--accent-color);
+  border-color: #f97316;
 }
 
 .file-input input {
@@ -578,7 +578,7 @@
 
 .form-group select:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: #f97316;
   box-shadow: 0 0 0 2px rgba(231, 111, 81, 0.1);
 }
 
@@ -600,7 +600,7 @@
   padding: 12px 30px;
   border: none;
   border-radius: 6px;
-  background: var(--accent-color);
+  background: #f97316;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -677,4 +677,9 @@
     width: 32px;
     height: 32px;
   }
+}.char-count {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  margin-top: 4px;
 }
