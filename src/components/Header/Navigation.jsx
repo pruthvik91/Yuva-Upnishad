@@ -6,6 +6,7 @@ const navigationLinks = [
   { id: 2, name: 'About Us', url: '/about' },
   { id: 3, name: 'Contact us', url: '/contact' },
   { id: 4, name: 'Careers', url: '/careers' },
+  { id: 5, name: 'Gallery', url: '/gallery' },
 ];
 
 const Navigation = ({ isMenuOpen, closeMenu }) => {

@@ -30,12 +30,18 @@ const Footer = () => {
           <ul className="f-contact-info">
             <li>
               <img src="/icons/map-marker.svg" alt="Location" className="contact-icon" />
-              <address>
-                2nd Floor, Ankur Shopping Centre,<br/>
-                Gujarat Gas Cir, opp. Vijay Dairy,<br/>
-                Maitry Society, Muktanand Nagar,<br/>
-                Adajan, Surat, Gujarat 395009
-              </address>
+               <address>
+    <a
+      href="https://www.google.com/maps?q=2nd+Floor,+Ankur+Shopping+Centre,+Gujarat+Gas+Cir,+opp.+Vijay+Dairy,+Maitry+Society,+Muktanand+Nagar,+Adajan,+Surat,+Gujarat+395009"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      2nd Floor, Ankur Shopping Centre,<br />
+      Gujarat Gas Cir, opp. Vijay Dairy,<br />
+      Maitry Society, Muktanand Nagar,<br />
+      Adajan, Surat, Gujarat 395009
+    </a>
+  </address>
             </li>
             <li>
               <img src="/icons/contact.svg" alt="Location" className="contact-icon" />

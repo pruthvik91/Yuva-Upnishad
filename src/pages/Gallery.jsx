@@ -3,73 +3,46 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import './Gallery.css';
-
-const images = [
-  {
-    id: 1,
-    url: 'https://images.pexels.com/photos/3769714/pexels-photo-3769714.jpeg',
-    title: 'Study Materials Display',
-    description: 'Our comprehensive collection of study materials for competitive exams.'
-  },
-  {
-    id: 2,
-    url: 'https://images.pexels.com/photos/4778611/pexels-photo-4778611.jpeg',
-    title: 'Student Success',
-    description: 'Students achieving their goals with our educational resources.'
-  },
-  {
-    id: 3,
-    url: 'https://images.pexels.com/photos/4778621/pexels-photo-4778621.jpeg',
-    title: 'Learning Environment',
-    description: 'Creating an ideal atmosphere for focused study and preparation.'
-  },
-  {
-    id: 4,
-    url: 'https://images.pexels.com/photos/4778619/pexels-photo-4778619.jpeg',
-    title: 'Digital Resources',
-    description: 'Modern learning tools and digital study materials.'
-  },
-  {
-    id: 5,
-    url: 'https://images.pexels.com/photos/4778620/pexels-photo-4778620.jpeg',
-    title: 'Group Study',
-    description: 'Collaborative learning environments for better understanding.'
-  },
-  {
-    id: 6,
-    url: 'https://images.pexels.com/photos/4778618/pexels-photo-4778618.jpeg',
-    title: 'Library Collection',
-    description: 'Extensive collection of books and study materials.'
-  }
-];
+import { allBooks } from '../components/Hero/Book';
+import Pagination from '../components/Pagination/Pagination';
 
 const Gallery = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 20;
+  const totalPages = Math.ceil(allBooks.length / itemsPerPage);
+
+  const paginatedItems = allBooks.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
   const [loadedImages, setLoadedImages] = useState({});
 
-  useEffect(() => {
-    const loadImage = (imageUrl) => {
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = imageUrl;
-        img.onload = () => resolve(imageUrl);
-        img.onerror = reject;
-      });
-    };
+useEffect(() => {
+  const loadImage = (imageUrl) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = imageUrl;
+      img.onload = () => resolve(imageUrl);
+      img.onerror = reject;
+    });
+  };
 
-    const loadAllImages = async () => {
-      try {
-        await Promise.all(images.map(img => loadImage(img.url)));
-        setLoading(false);
-      } catch (error) {
-        console.error('Error loading images:', error);
-        setLoading(false);
-      }
-    };
+  const loadAllImages = async () => {
+    try {
+      await Promise.all(paginatedItems.map(img => loadImage(img.cover)));
+      setLoading(false);
+    } catch (error) {
+      console.error('Error loading images:', error);
+      setLoading(false);
+    }
+  };
 
-    loadAllImages();
-  }, []);
+  setLoading(true);
+  loadAllImages();
+}, [currentPage]);
 
   const handleImageLoad = (imageId) => {
     setLoadedImages(prev => ({
@@ -96,30 +69,27 @@ const Gallery = () => {
   }, [selectedImage]);
 
   const navigateImage = (direction) => {
-    const currentIndex = images.findIndex(img => img.id === selectedImage.id);
+    const currentIndex = allBooks.findIndex(img => img.id === selectedImage.id);
     let newIndex;
 
     if (direction === 'prev') {
-      newIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+      newIndex = currentIndex > 0 ? currentIndex - 1 : allBooks.length - 1;
     } else {
-      newIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+      newIndex = currentIndex < allBooks.length - 1 ? currentIndex + 1 : 0;
     }
 
-    setSelectedImage(images[newIndex]);
+    setSelectedImage(allBooks[newIndex]);
   };
 
   return (
-
-    <>  
-    
-
     <section className="gallery-container main-container">
       <h2>Discover Our Book Collection</h2>
-        <p className="section-intro">
-          Explore a curated selection of books designed to enlighten, inspire, and empower learners at every stage. From foundational concepts to advanced insights, our collection supports academic success and lifelong learning.
-        </p>
+      <p className="section-intro">
+        Explore a curated selection of books designed to enlighten, inspire, and empower learners at every stage. From foundational concepts to advanced insights, our collection supports academic success and lifelong learning.
+      </p>
+
       <div className="gallery-grid">
-        {images.map((image) => (
+        {paginatedItems.map((image) => (
           <div
             key={image.id}
             className="gallery-item"
@@ -129,7 +99,7 @@ const Gallery = () => {
               <Skeleton height="100%" />
             )}
             <img
-              src={image.url}
+              src={image.cover}
               alt={image.title}
               onLoad={() => handleImageLoad(image.id)}
               style={{ display: loadedImages[image.id] ? 'block' : 'none' }}
@@ -144,25 +114,16 @@ const Gallery = () => {
       {selectedImage && (
         <div className="lightbox" onClick={() => setSelectedImage(null)}>
           <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <button
-              className="lightbox-close"
-              onClick={() => setSelectedImage(null)}
-            >
+            <button className="lightbox-close" onClick={() => setSelectedImage(null)}>
               <X />
             </button>
-            <button
-              className="lightbox-nav prev"
-              onClick={() => navigateImage('prev')}
-            >
+            <button className="lightbox-nav prev" onClick={() => navigateImage('prev')}>
               <ChevronLeft />
             </button>
-            <button
-              className="lightbox-nav next"
-              onClick={() => navigateImage('next')}
-            >
+            <button className="lightbox-nav next" onClick={() => navigateImage('next')}>
               <ChevronRight />
             </button>
-            <img src={selectedImage.url} alt={selectedImage.title} />
+            <img src={selectedImage.cover} alt={selectedImage.title} />
             <div className="lightbox-caption">
               <h3>{selectedImage.title}</h3>
               <p>{selectedImage.description}</p>
@@ -170,8 +131,13 @@ const Gallery = () => {
           </div>
         </div>
       )}
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </section>
-    </>
   );
 };
 

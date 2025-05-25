@@ -1,51 +1,29 @@
 <?php
-// Include PHPMailer (adjust the path as needed)
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 
-require 'vendor/autoload.php'; // Adjust the path to PHPMailer's autoload
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+require 'functions.php'; // Include the common email sending file
 
 // Get the posted data
-$name = isset($_POST['name']) ? $_POST['name'] : '';
+$fullName = isset($_POST['fullName']) ? $_POST['fullName'] : '';
 $email = isset($_POST['email']) ? $_POST['email'] : '';
+$mobile = isset($_POST['mobile']) ? $_POST['mobile'] : '';
+$city = isset($_POST['city']) ? $_POST['city'] : '';
 $message = isset($_POST['message']) ? $_POST['message'] : '';
 
 // Validate the input fields
-if(empty($name) || empty($email) || empty($message)) {
+if (empty($fullName) || empty($email) || empty($mobile) || empty($city) || empty($message)) {
     echo json_encode(['status' => 'error', 'message' => 'All fields are required.']);
     exit;
 }
 
-// Create the PHPMailer instance
-$mail = new PHPMailer(true);
-try {
-    // Server settings
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';  // Your SMTP server
-    $mail->SMTPAuth = true;
-    $mail->Username = 'pruthvikdhamecha@gmail.com';  // Your email
-    $mail->Password = 'cijbcafcotqbcfaj';  // Your email password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
-
-    // Recipients
-    $mail->setFrom($email, $name);
-    $mail->addAddress('pruthvikdhamecha@gmail.com', 'Pruthvik');  // Add a recipient
-
-    // Content
-    $mail->isHTML(true);
-    $mail->Subject = 'New Contact Message from ' . $name;
-    $mail->Body    = '<p><strong>Name:</strong> ' . $name . '</p>
-                      <p><strong>Email:</strong> ' . $email . '</p>
-                      <p><strong>Message:</strong></p>
-                      <p>' . nl2br($message) . '</p>';
-
-    // Send the email
-    if ($mail->send()) {
-        echo json_encode(['status' => 'success', 'message' => 'Message sent successfully.']);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Message could not be sent.']);
-    }
-} catch (Exception $e) {
-    echo json_encode(['status' => 'error', 'message' => 'Mailer Error: ' . $mail->ErrorInfo]);
-}
+// Call the send_email function with the type 'contact'
+$response = send_email($fullName, $email,  $message,$mobile, null, 'contact');
+echo json_encode($response);
+?>
