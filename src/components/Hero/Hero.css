@@ -193,14 +193,6 @@
   transform: rotate(15deg);
 }
 
-.circle {
-  width: 100px;
-  height: 100px;
-  top: 60%;
-  left: 70%;
-  border-radius: 50%;
-  background: #0f62fe;
-}
 
 .rectangle {
   width: 150px;
