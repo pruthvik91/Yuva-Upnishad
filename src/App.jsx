@@ -8,7 +8,7 @@ import HeroBookCarousel from './components/Hero/HeroSlider';
 import Footer from './components/Footer/Footer';
 import Loader from './components/Loader/Loader';
 import Careers from './pages/Careers';
-import Gallery from './pages/Gallery';
+import Books from './pages/Gallery';
 import AboutUs from './pages/Aboutus';
 import Contact from './pages/ContactPage';
 import { ToastContainer } from 'react-toastify';
@@ -54,7 +54,7 @@ if (loading) {
             <Route path="/" element={<Hero />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/books" element={<Books />} />
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/hero" element={<HeroBookCarousel />} />

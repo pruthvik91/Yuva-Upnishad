@@ -6,7 +6,7 @@
   z-index: 1000;
   background-color: var(--white);
   transition: all 0.3s ease;
-  padding: 40px 0;
+  padding: 40px 0;  
 }
 
 .header-container {

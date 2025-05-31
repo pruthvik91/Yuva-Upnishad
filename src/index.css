@@ -34,6 +34,7 @@ body {
   min-height: 100vh;
   color: var(--text-dark);
   background-color: var(--white);
+  background-color: #183b6300;
 }
 
 h1, h2, h3, h4, h5, h6 {

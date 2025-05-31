@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+ 
 }
 
 .hero-background {
@@ -40,6 +41,8 @@
   margin: 0 auto;
   padding: 0 20px;
   z-index: 2;
+  box-shadow: 0 10px 40px rgba(30, 41, 59, 0.6); /* bluish shadow */
+  color: #fff;
 }
 
 .hero-title {
@@ -153,3 +156,67 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, #e8f0ff 0%, #ffffff 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 19px,
+      rgba(0, 0, 0, 0.03) 20px
+    );
+  z-index: 0;
+}
+.book-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.06;
+  background: #1e3a8a;
+  border-radius: 4px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  transform: rotate(15deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  left: 70%;
+  border-radius: 50%;
+  background: #0f62fe;
+}
+
+.rectangle {
+  width: 150px;
+  height: 30px;
+  bottom: 10%;
+  right: 5%;
+  transform: rotate(-10deg);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
