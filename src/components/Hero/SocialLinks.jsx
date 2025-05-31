@@ -1,4 +1,4 @@
-import React, { useState,useEffect,useRef } from 'react';
+import React from 'react';
 import './SocialLinks.css';
 
 const socialLinksData = [
@@ -30,26 +30,8 @@ const socialLinksData = [
 ];
 
 const SocialLinks = () => {
-  const [open, setOpen] = useState(false);
- // Close on outside click
-  const wrapperRef = useRef(null);
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        setOpen(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("scroll", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-   }, []);
   return (
-    <div className={`social-links-wrapper ${open ? 'open' : ''}`} ref={wrapperRef}>
-      <div className="toggle-button" onClick={() => setOpen(prev => !prev)}>
-        <img src="/icons/contact-mobile.svg" alt="toggle" />
-
-      </div>
+    <div className="social-links-wrapper">
       <div className="social-links">
         {socialLinksData.map((social) => (
           <a key={social.id} href={social.link} className="social-link" target="_blank" rel="noreferrer">

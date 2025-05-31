@@ -112,6 +112,10 @@
   .hero-subtitle {
     font-size: 16px;
   }
+  .hero-floating{
+    visibility: hidden;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -212,3 +216,15 @@
   z-index: 0;
 }
 
+.social-links-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.find-us-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1e40af;
+}
