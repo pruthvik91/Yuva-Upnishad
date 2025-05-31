@@ -7,7 +7,14 @@ const Achievements = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
   const hasAnimatedRef = useRef(new Set());
-
+// {
+//       id: 2,
+//       icon: <Users size={46} />,
+//       number: 5000,
+//       plus: true,
+//       title: 'Loyal Readers',
+//       description: 'Trusted by a growing community who rely on our content for knowledge, guidance, and inspiration.'
+//     },
   const achievementsData = [
     {
       id: 1,
@@ -19,14 +26,6 @@ const Achievements = () => {
     },
     {
       id: 2,
-      icon: <Users size={46} />,
-      number: 5000,
-      plus: true,
-      title: 'Loyal Readers',
-      description: 'Trusted by a growing community who rely on our content for knowledge, guidance, and inspiration.'
-    },
-    {
-      id: 3,
       icon: <Trophy size={46} />,
       number: 1,
       plus: false,
@@ -34,7 +33,7 @@ const Achievements = () => {
       description: 'Recognized nationwide—our titles consistently rank among the bestsellers in their categories.'
     },
     {
-      id: 4,
+      id: 3,
       icon: <Medal size={46} />,
       number: 1,
       plus: false,
@@ -71,7 +70,7 @@ const Achievements = () => {
   const startTimeRef = useRef(null);
 
   useEffect(() => {
-    if (!isVisible || index >= 2 || hasAnimatedRef.current.has(index)) {
+    if (!isVisible || index >= 1 || hasAnimatedRef.current.has(index)) {
       setCount(number);
       return;
     }

@@ -8,9 +8,7 @@
     flex-direction: row;
     align-items: center;
 }
-.footer .social-links-wrapper {
-  background:rgba(0, 0, 0, 0.2);
-}
+
 /* Remove toggle button entirely */
 .toggle-button {
   display: none;

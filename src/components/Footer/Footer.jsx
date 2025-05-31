@@ -14,6 +14,7 @@ const Footer = () => {
           <p className="footer-description">
             Yuva Upnishad Publication is dedicated to publishing insightful and educational content that enriches minds and inspires growth.
           </p>
+            <SocialLinks />
         </div>
         
         <div className="footer-section links-section">
@@ -71,7 +72,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <SocialLinks />
+    
 
       <div className="footer-bottom">
         <div className="container">
