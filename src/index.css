@@ -78,4 +78,8 @@ button {
   .container {
     padding: 0 12px;
   }
+  .lightbox-close {
+        top: -50px !important; 
+        right: -10px!important;
+    }
 }
