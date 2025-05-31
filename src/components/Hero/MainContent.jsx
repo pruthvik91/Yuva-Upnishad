@@ -143,7 +143,19 @@ const MainContent = () => {
             <div className="availability-text">
               <p>Our books are widely available across Gujarat and can be purchased through:</p>
               <ul>
-                <li>E-commerce platforms (Flipkart, Amazon) </li>
+                <li>E-commerce platforms  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <a href="javascript:void(0)"  rel="noopener noreferrer">
+                <img src="./icons/flipkart.png" alt="Flipkart" style={{ height: '20px' }} />
+              </a>
+              Flipkart
+            </span>
+            &nbsp;,&nbsp;
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <a href="https://www.amazon.in/storefront?me=A1HV7Z9ZMP49GP&ref_=ssf_share" target="_blank" rel="noopener noreferrer">
+                <img src="./icons/amazon.png" alt="Amazon" style={{ height: '20px' }} />
+              </a>
+              Amazon
+            </span> </li>
                 <li>Local bookstores and educational outlets</li>
                 <li>Our institute branches</li>
               </ul>

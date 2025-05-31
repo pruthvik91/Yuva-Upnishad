@@ -120,32 +120,7 @@ const Hero = () => {
           
         </div>
 
-        <div
-          style={{
-            position: "absolute",
-            top: "5%",
-            right: "5%",
-            width: "40px",
-            height: "40px",
-            opacity: 0.5,
-            animation: "floatFast 5s ease-in-out infinite",
-            pointerEvents: "none",
-            zIndex: 5,
-          }}
-          className="hero-floating"
-          aria-hidden="true"
-        >
-          {/* Book Stack Icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="#1e40af"
-            width="100%"
-            height="100%"
-          >
-            <path d="M4 6h16v2H4V6zm0 4h16v2H4v-2zm0 4h16v2H4v-2z" />
-          </svg>
-        </div>
+        
 
         <div
           style={{

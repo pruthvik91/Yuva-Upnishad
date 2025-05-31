@@ -1,4 +1,4 @@
-.social-links-wrapper {
+.hero .social-links-wrapper {
     position: fixed;
     top: -5%;
     left: 37%;
@@ -7,6 +7,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.footer .social-links-wrapper {
+  background:rgba(0, 0, 0, 0.2);
 }
 /* Remove toggle button entirely */
 .toggle-button {
@@ -22,6 +25,7 @@
     opacity: 1;
     pointer-events: auto;
     margin-left: 0;
+    justify-content:center;
 }
 
 .social-link {

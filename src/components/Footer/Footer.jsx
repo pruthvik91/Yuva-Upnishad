@@ -1,5 +1,6 @@
 import './Footer.css';
 import Logo from '../Header/Logo';
+import SocialLinks from "../Hero/SocialLinks";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -70,7 +71,8 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      
+      <SocialLinks />
+
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright">
