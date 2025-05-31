@@ -170,11 +170,12 @@ We publish with purpose — empowering minds and protecting our planet.</p>
       <label>Select Post</label>
       <select id="post" name="post" onChange={handleChange} required>
         <option value="">-- Select a Position --</option>
-        <option value="frontend">Frontend Developer</option>
-        <option value="backend">Backend Developer</option>
-        <option value="designer">UI/UX Designer</option>
-        <option value="manager">Project Manager</option>
-        <option value="intern">Intern</option>
+        <option value="ContentDeveloper">Content Developer</option>
+        <option value="GraphicsDesigner">Graphics Designer</option>
+        <option value="Proofreader">Proof reader</option>
+        <option value="Translator">Translator</option>
+        <option value="HR">HR</option>
+        <option value="Socialmarketer">Social Media Marketer</option>
       </select>
     </div>
     <div className="form-group">
