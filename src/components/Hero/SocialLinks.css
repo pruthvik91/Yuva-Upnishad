@@ -42,3 +42,8 @@
   width: 40px;
   height: 40px;  
 }
+@media (max-width: 768px) {
+  .hero .social-links-wrapper{
+    left: 14%;
+  }
+}
