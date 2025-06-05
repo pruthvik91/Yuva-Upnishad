@@ -256,8 +256,7 @@ const MainContent = () => {
           <div className="availability-content">
             <div className="availability-text">
               <p>
-                Our books are widely available across Gujarat and can be
-                purchased through:
+                Our books are widely available across Gujarat and can be purchased through various online platforms such as :
               </p>
               <ul>
                 <li>
@@ -300,15 +299,11 @@ const MainContent = () => {
                     Flipkart
                   </span>
                 </li>
-                <li>Local bookstores and educational outlets</li>
-                <li>Our institute branches</li>
+                <li> local bookstores as well as from our various branches of our institute.</li>
+                <li>Additionally, some reading materials are available for free download in PDF format, providing accessible resources for students.</li>
               </ul>
               {/* className="highlight" */}
-              <p >
-                Our aim is to make exam preparation easier, smarter, and more
-                accessible for each and every student. Students can prepare
-                effectively and succeed in competitive exams.
-              </p>
+             
             </div>
             <div className="availability-image">
               <img
