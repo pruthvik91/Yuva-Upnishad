@@ -515,7 +515,6 @@
   transition: transform 0.3s ease;
   display: flex;
   gap: 10px;
-  justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
