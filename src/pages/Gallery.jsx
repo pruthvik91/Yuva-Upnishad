@@ -89,7 +89,7 @@ useEffect(() => {
       </p>
 <div className="amazon-store-link">
   <a
-    href="https://www.amazon.in/your-store-link"
+    href="https://www.amazon.in/storefront?me=A1HV7Z9ZMP49GP&ref_=ssf_share"
     target="_blank"
     rel="noopener noreferrer"
     className="amazon-button"
