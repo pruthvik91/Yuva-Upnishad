@@ -87,6 +87,21 @@ useEffect(() => {
       <p className="section-intro">
         Explore a curated selection of books designed to enlighten, inspire, and empower learners at every stage. From foundational concepts to advanced insights, our collection supports academic success and lifelong learning.
       </p>
+<div className="amazon-store-link">
+  <a
+    href="https://www.amazon.in/your-store-link"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="amazon-button"
+  >
+    <img
+      src="/icons/amazon.png"
+      alt="Shop on Amazon"
+      className="amazon-logo"
+    />
+    Shop on Amazon
+  </a>
+</div>
 
       <div className="gallery-grid">
         {paginatedItems.map((image) => (

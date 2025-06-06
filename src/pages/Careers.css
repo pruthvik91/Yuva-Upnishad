@@ -507,7 +507,7 @@
 
 .team-member {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 35px;
   padding: 20px;
   font-size: 1.1rem;
   color: #222;
@@ -518,6 +518,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
 }
 
 .team-member:hover {

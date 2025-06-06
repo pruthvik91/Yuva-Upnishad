@@ -18,7 +18,7 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="aboutus" >
-        <h2 className="section-title">Meet the Minds Behind the Pages</h2>
+        <h2 className="section-title">Meet the Minds Behind the Book</h2>
         <div className="about-content">
           <p>
             The Content Developer Team at our publication house plays a pivotal role in creating content for various subject books as per the syllabus pattern and topics of competitive examination. The team places a strong emphasis on ensuring conceptual clarity, accuracy, and thorough quality assurance to support students' learning and exam readiness.

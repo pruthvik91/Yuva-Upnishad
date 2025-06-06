@@ -181,4 +181,41 @@
   .gallery-item {
     aspect-ratio: 2/3;
   }
+}.amazon-store-link {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.amazon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  /* background-color: #ff9900; */
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.5); /* orange shadow */
+}
+
+
+.amazon-button {
+  background-color: transparent;
+  color: #f97316;
+  border: 2px solid #f97316;
+  box-shadow: 0 0 0 rgba(0,0,0,0); /* no shadow initially */
+}
+
+.amazon-button:hover {
+  background: transparent;
+  /* color: #d65a0f; Slightly darker orange on hover text */
+  box-shadow: 0 0 12px 4px rgba(249, 115, 22, 0.7); /* orange glow */
+  transform: translateY(-2px);
+}
+
+.amazon-logo {
+  height: 24px;
+  width: auto;
 }

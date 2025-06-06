@@ -116,11 +116,13 @@ const MainContent = () => {
                 {/* <h3>Quality Education</h3> */}
                 <p>
                   Books give us a place to go when we have to stay where we are
-                  - Dr. APJ Abdul Kalam At Yuva Upnishad Publication, our
+                  - <b>Dr. APJ Abdul Kalam</b>
+                  <p> At Yuva Upnishad Publication, our
                   mission is to reach the last person through books, help them
                   secure a government job by reading our materials, promote a
                   long-lasting life, and encourage their valuable and ethical
                   contributions to the development of society and the nation.
+                  </p>
                 </p>
               </div>
               {/* <div className="mission-card">
