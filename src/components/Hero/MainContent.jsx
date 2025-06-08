@@ -76,7 +76,7 @@ const MainContent = () => {
             icon="/icons/id-card.svg"
           /><ExpertiseCard
             title="GPSSB"
-            description="Talati cum mantri , Junior Clerk, Nayab Chitnis etc."
+            description="Talati cum mantri , Junior Clerk, Nayab Chitnis, Mukhya Sevika, MPHW, FHW, and Gram Sevak"
             icon="/icons/people-group.svg"
           />
           <ExpertiseCard
@@ -85,7 +85,7 @@ const MainContent = () => {
             icon="/icons/police-badge-shield.svg"
           />
           <ExpertiseCard
-            title="Gujarat High court"
+            title="Gujarat High Court"
             description="High Court Dy.So.,  Court Assistant, Bailiff, Peon, Driver  and more."
             icon="/icons/law.svg"
           />
@@ -101,7 +101,7 @@ const MainContent = () => {
           />
           <ExpertiseCard
             title="Others"
-            description="UGC-NET and SLET, TET/TAT/HTA, Mukhya Sevika, MPHW, FHW, Gram Sevak,  Conductor, SSC CGL, CHSL and MTS."
+            description="UGC-NET and SLET, TET/TAT/HTAT, Conductor, SSC CGL, CHSL and MTS."
             icon="/icons/books.svg"
           />
         </div>
