@@ -71,7 +71,7 @@ const MainContent = () => {
             icon="/icons/books.svg"
           />
           <ExpertiseCard
-            title="GSSSEB"
+            title="GSSSB"
             description="CCE (Group A & B), Revenue Talati, Forest Guard and various Technical Exams"
             icon="/icons/id-card.svg"
           /><ExpertiseCard
@@ -80,7 +80,7 @@ const MainContent = () => {
             icon="/icons/people-group.svg"
           />
           <ExpertiseCard
-            title="Gujarat Police recruitment Board"
+            title="Gujarat Police Recruitment Board"
             description="PSI, ASI, Constable"
             icon="/icons/police-badge-shield.svg"
           />
