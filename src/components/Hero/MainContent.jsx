@@ -146,6 +146,7 @@ const MainContent = () => {
             <img
               src="./vision.png"
               alt="Students reading books"
+              width="450px"
             />
           </div>
           <div className="section-content">
