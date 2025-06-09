@@ -133,7 +133,7 @@ const MainContent = () => {
           </div>
           <div className="mission-section-image">
             <img
-              src="https://images.pexels.com/photos/256431/pexels-photo-256431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="/mission.png"
               alt="Student studying"
             />
           </div>
@@ -144,7 +144,7 @@ const MainContent = () => {
         <div className="mission-section-container section-container">
           <div className="mission-section-image">
             <img
-              src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="./vision.png"
               alt="Students reading books"
             />
           </div>
@@ -207,8 +207,9 @@ const MainContent = () => {
           </div>
           <div className="section-image our-values-img">
             <img
-              src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="/Value.png?w=1260&h=750&dpr=1"
               alt="Team collaboration"
+              width="800px"
             />
           </div>
         </div>
@@ -305,7 +306,7 @@ const MainContent = () => {
             </div>
             <div className="availability-image">
               <img
-                src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="/available.png"
                 alt="Books on display"
               />
             </div>

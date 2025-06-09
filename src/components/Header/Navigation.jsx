@@ -4,9 +4,9 @@ import './Navigation.css';
 const navigationLinks = [
   { id: 1, name: 'Home', url: '/' },
   { id: 2, name: 'About Us', url: '/about' },
-  { id: 3, name: 'Contact us', url: '/contact' },
-  { id: 4, name: 'Our Books', url: '/books' },
-  { id: 5, name: 'Careers', url: '/careers' },
+  { id: 3, name: 'Our Books', url: '/books' },
+  { id: 4, name: 'Careers', url: '/careers' },
+  { id: 5, name: 'Contact us', url: '/contact' },
 ];
 
 const Navigation = ({ isMenuOpen, closeMenu }) => {
