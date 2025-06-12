@@ -205,20 +205,20 @@ const Careers = () => {
             <span>Subject Experts</span>
           </div>
           <div className="team-member">
-            <Keyboard className="team-icon" />
-            <span>Typist</span>
-          </div>
-          <div className="team-member">
             <PenLine className="team-icon" />
             <span>Content Developer</span>
           </div>
           <div className="team-member">
-            <Paintbrush2 className="team-icon" />
-            <span>Graphics Designer</span>
-          </div>
-          <div className="team-member">
             <SpellCheck className="team-icon" />
             <span>Proof Reader</span>
+          </div>
+          <div className="team-member">
+            <Keyboard className="team-icon" />
+            <span>Typist</span>
+          </div>
+          <div className="team-member">
+            <Paintbrush2 className="team-icon" />
+            <span>Graphics Designer</span>
           </div>
           <div className="team-member">
             <Megaphone className="team-icon" />

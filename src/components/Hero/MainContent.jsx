@@ -76,7 +76,7 @@ const MainContent = () => {
             icon="/icons/id-card.svg"
           /><ExpertiseCard
             title="GPSSB"
-            description="Talati cum mantri , Junior Clerk, Nayab Chitnis, Mukhya Sevika, MPHW, FHW, and Gram Sevak"
+            description="Talati cum mantri, Junior Clerk, Nayab Chitnish, Mukhya Sevika, MPHW, FHW and Gram Sevak"
             icon="/icons/people-group.svg"
           />
           <ExpertiseCard
@@ -104,6 +104,40 @@ const MainContent = () => {
             description="UGC-NET and SLET, TET/TAT/HTAT, Conductor, SSC CGL, CHSL and MTS."
             icon="/icons/books.svg"
           />
+        </div>
+      </section>
+      <section className="offerings-section" data-aos="fade-up">
+        <div className="section-container">
+          <h2>Our Offerings</h2>
+          <div className="offerings-grid">
+            <div className="offering-card">
+              <BookOpen className="offering-icon" />
+              <h3>Comprehensive Study Materials</h3>
+              <p>
+                Our publication cover various subjects including Indian Polity,
+                History, Culture, Geography, Economics, and more, based on
+                trusted sources like GCERT, NCERT, NIOS, Tamilnadu Education
+                Board curricula, Gujarat Granth Nirman Board, Authentic and
+                Official websites
+              </p>
+            </div>
+            <div className="offering-card">
+              <Book className="offering-icon" />
+              <h3>Monthly Current Affairs</h3>
+              <p>
+                Stay updated with our monthly magazine focused on Current
+                Affairs, providing crucial insights for competitive exams.
+              </p>
+            </div>
+            <div className="offering-card">
+              <Award className="offering-icon" />
+              <h3>Practice Resources</h3>
+              <p>
+                Access detailed explanations, previous year questions with
+                analysis, and mock tests based on current trends.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section className="mission-section hidden-element" data-aos="fade-up">
@@ -215,40 +249,7 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-      <section className="offerings-section" data-aos="fade-up">
-        <div className="section-container">
-          <h2>Our Offerings</h2>
-          <div className="offerings-grid">
-            <div className="offering-card">
-              <BookOpen className="offering-icon" />
-              <h3>Comprehensive Study Materials</h3>
-              <p>
-                Our publication cover various subjects including Indian Polity,
-                History, Culture, Geography, Economics, and more, based on
-                trusted sources like GCERT, NCERT, NIOS, Tamilnadu Education
-                Board curricula, Gujarat Granth Nirman Board, Authentic and
-                Official websites
-              </p>
-            </div>
-            <div className="offering-card">
-              <Book className="offering-icon" />
-              <h3>Monthly Current Affairs</h3>
-              <p>
-                Stay updated with our monthly magazine focused on Current
-                Affairs, providing crucial insights for competitive exams.
-              </p>
-            </div>
-            <div className="offering-card">
-              <Award className="offering-icon" />
-              <h3>Practice Resources</h3>
-              <p>
-                Access detailed explanations, previous year questions with
-                analysis, and mock tests based on current trends.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="availability-section" data-aos="fade-up">
         <div className="section-container">
