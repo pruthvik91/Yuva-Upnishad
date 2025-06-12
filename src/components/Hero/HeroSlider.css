@@ -224,12 +224,8 @@
     font-size: 2rem;
   }
 
-  .line1 {
-    font-size: 1.8rem;
-  }
-
-  .line2, .line3 {
-    font-size: 2rem;
+  .line1,.line2, .line3 {
+    font-size: 2.4rem;
   }
 
   .hero-subtitle {
