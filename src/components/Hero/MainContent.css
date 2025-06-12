@@ -305,7 +305,8 @@ section h2::after {
     flex-direction:column;
     
   }
-  .section-container.our-values{
+  .mission-section .mission-section-container,
+  .values-section .section-container{
     flex-direction:column-reverse ;
   }
   .mission-card{
