@@ -167,7 +167,7 @@ const MainContent = () => {
           </div>
           <div className="mission-section-image">
             <img
-              src="/mission.png"
+              src="/yuvaassets/mission.webp"
               alt="Student studying"
             />
           </div>
@@ -178,7 +178,7 @@ const MainContent = () => {
         <div className="mission-section-container section-container">
           <div className="mission-section-image">
             <img
-              src="./vision.png"
+              src="/yuvaassets/vision.webp"
               alt="Students reading books"
               width="450px"
             />
@@ -242,7 +242,7 @@ const MainContent = () => {
           </div>
           <div className="section-image our-values-img">
             <img
-              src="/Value.png?w=1260&h=750&dpr=1"
+              src="/yuvaassets/Value.webp"
               alt="Team collaboration"
               width="800px"
             />
@@ -308,7 +308,7 @@ const MainContent = () => {
             </div>
             <div className="availability-image">
               <img
-                src="/available.png"
+                src="/yuvaassets/available.webp"
                 alt="Books on display"
               />
             </div>

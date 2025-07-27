@@ -34,7 +34,7 @@ const ContactPage = () => {
     formDataToSubmit.append("message", formData.message);
 
     try {
-      const response = await fetch("http://localhost/yuva-Upnishad%2009/backend/api/contact.php", {
+      const response = await fetch("https://yuvaupnishadpublication.com//backend/api/contact.php", {
         method: "POST",
         body: formDataToSubmit
       });
@@ -62,7 +62,7 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="fullName">Full Name</label>
+                <label htmlFor="fullName">Full Name <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="text"
                   id="fullName"
@@ -73,7 +73,7 @@ const ContactPage = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email Address</label>
+                <label htmlFor="email">Email Address <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="email"
                   id="email"
@@ -86,7 +86,7 @@ const ContactPage = () => {
             </div>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="mobile">Mobile Number</label>
+                <label htmlFor="mobile">Mobile Number <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="tel"
                   id="mobile"
@@ -97,7 +97,7 @@ const ContactPage = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="city">City</label>
+                <label htmlFor="city">City <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="text"
                   id="city"
@@ -121,7 +121,7 @@ const ContactPage = () => {
             </div>
             <button type="submit" className="submit-button" disabled={loading}>
               {loading ? (
-                <span>Loading...</span> // Show loading text or spinner here
+                <span>Loading...</span>
               ) : (
                 'Send Message'
               )}

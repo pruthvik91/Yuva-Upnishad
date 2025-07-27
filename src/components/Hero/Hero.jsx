@@ -8,7 +8,7 @@ import { allBooks } from "./Book";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const books = allBooks.slice(0, 5);
+  const books = allBooks.filter(book => book.slider === 1)
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % books.length);
@@ -42,6 +42,7 @@ const Hero = () => {
   };
   return (
     <>
+    <h1 className="seo-related">Yuva Upnishad Publication</h1>
       <section className="hero main-container">
         <div className="book-shapes">
           <div className="shape square"></div>

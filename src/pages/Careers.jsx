@@ -72,7 +72,7 @@ const Careers = () => {
 
     try {
       const response = await fetch(
-        "http://localhost/yuva-Upnishad%2009/backend/api/careers.php",
+        "https://yuvaupnishadpublication.com/backend/api/careers.php",
         {
           method: "POST",
           body: formDataToSubmit,
@@ -99,37 +99,6 @@ const Careers = () => {
   };
   return (
     <div className="careers-container main-container">
-      {/* <section className="careers-hero">
-        <h1>Join Our Team</h1>
-        <p>Help us shape the future of education</p>
-      </section> */}
-
-      {/* <section className="why-join-us">
-        <h2>Why Join Us?</h2>
-        <div className="benefits-grid">
-          <div className="benefit-card">
-            <Heart className="benefit-icon" />
-            <h3>Work-Life Balance</h3>
-            <p>We focus on professional growth, collaboration, and a respectful work environment.</p>
-          </div>
-          <div className="benefit-card">
-            <Coffee className="benefit-icon" />
-            <h3>Learning with Earning</h3>
-<p>Our content developers grow by revising key subjects—many have cleared top exams and hold government posts.</p>
-
-          </div>
-          <div className="benefit-card">
-            <Users className="benefit-icon" />
-            <h3>Collaborative Culture</h3>
-            <p>Work with passionate educators and innovators in a supportive team environment.</p>
-          </div>
-          <div className="benefit-card">
-            <Zap className="benefit-icon" />
-            <h3>Innovation Focus</h3>
-            <p>Be part of creating cutting-edge educational solutions and methodologies.</p>
-          </div>
-        </div>
-      </section> */}
       <section>
         <h2>What Are We Looking For?</h2>
         <div className="looking-for">
@@ -146,7 +115,7 @@ const Careers = () => {
         <p>
           Keep checking this page for the latest job openings. Have questions?
           Email us at
-          <a href="mailto:info@yuva-upnishad.com"> info@yuva-upnishad.com</a>.
+          <a href="mailto:yuvaupnishadpublication@gmail.com"> yuvaupnishadpublication@gmail.com</a>.
         </p>
         </div>
       </section>
@@ -157,44 +126,14 @@ const Careers = () => {
             <h2>Work Culture At Yuva Upanishad Publication</h2>
             <div className="culture-values">
               <div className="culture-value">
-                {/* <BookOpen className="culture-icon" /> */}
                 <div>
-                  {/* <h3>Our Passion Drives Us</h3> */}
                   <p>
                     At <strong>Yuva Upnishad Publication</strong>, We believe that our diverse experiences enrich the way we learn, teach, and grow—we believe in creating a vibrant, inclusive environment and belonging that enables us to work together through diversity and technological advancement.
                   </p>
                 </div>
               </div>
-              {/* <div className="culture-value">
-                <Trophy className="culture-icon" />
-                <div>
-                  <h3>A Culture of Openness & Inclusion</h3>
-                  <p>
-                    We foster open, respectful communication with authors and
-                    content developers. Our inclusive culture values equality,
-                    with a balanced gender workforce.
-                  </p>
-                </div>
-              </div>
-              <div className="culture-value">
-                <Smile className="culture-icon" />
-                <div>
-                  <h3>Leading with Responsibility</h3>
-                  <p>
-                    As Gujarat’s leading publisher, we embrace sustainable,
-                    responsible practices. We publish with purpose — empowering
-                    minds and protecting our planet.
-                  </p>
-                </div>
-              </div> */}
             </div>
           </div>
-          {/* <div className="culture-image">
-            <img
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
-              alt="Team collaboration"
-            />
-          </div> */}
         </div>
       </section>
       <section className="our-team">
@@ -236,7 +175,7 @@ const Careers = () => {
           encType="multipart/form-data"
         >
           <div className="form-group">
-            <label>Full Name</label>
+            <label>Full Name <span style={{ color: "red" }}>*</span></label>
             <input
               type="text"
               id="fullName"
@@ -246,7 +185,7 @@ const Careers = () => {
             />
           </div>
           <div className="form-group">
-            <label>Email</label>
+            <label>Email <span style={{ color: "red" }}>*</span></label>
             <input
               type="email"
               id="email"
@@ -256,7 +195,7 @@ const Careers = () => {
             />
           </div>
           <div className="form-group">
-            <label>Phone</label>
+            <label>Phone <span style={{ color: "red" }}>*</span></label>
             <input
               type="tel"
               id="phone"
@@ -266,7 +205,7 @@ const Careers = () => {
             />
           </div>
           <div className="form-group">
-            <label>Select Post</label>
+            <label>Select Post <span style={{ color: "red" }}>*</span></label>
             <select id="post" name="post" onChange={handleChange} required>
               <option value="">-- Select a Position --</option>
               <option value="contentdeveloper">Content Developer</option>
@@ -278,7 +217,7 @@ const Careers = () => {
             </select>
           </div>
           <div className="form-group">
-            <label>Resume</label>
+            <label>Resume <span style={{ color: "red" }}>*</span></label>
             <div className="file-input">
               <span>Upload Resume</span>
               <input
@@ -299,7 +238,6 @@ const Careers = () => {
               name="message"
               onChange={handleChange}
               rows="4"
-              required
             ></textarea>
           </div>
           <div className="form-actions">

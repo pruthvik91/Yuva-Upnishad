@@ -12,3 +12,12 @@
     Header set Cache-Control "max-age=31536000, public"
   </FilesMatch>
 </IfModule>
+
+# ✅ React Router fallback (keep this at the bottom)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>

@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-top"></div>
       <div className="container footer-container">
         <div className="footer-section about-section">
-          <Logo src="/logo-f.svg" alt="Footer Logo" className="footer-logo-image" />
+          <Logo src="/yuvaassets/logo-f.svg" alt="Footer Logo" className="footer-logo-image" />
           <p className="footer-description">
             Yuva Upnishad Publication is dedicated to publishing insightful and educational content that enriches minds and inspires growth.
           </p>
@@ -51,8 +51,8 @@ const Footer = () => {
             </li>
             <li>
               <img src="/icons/envelop.svg" alt="Location" className="contact-icon" />
-              <a href="mailto:Yuvaupnishadpublication@gmail.com">
-                Yuvaupnishadpublication@gmail.com
+              <a href="mailto:yuvaupnishadpublication@gmail.com">
+                yuvaupnishadpublication@gmail.com
               </a>
             </li>
           </ul>

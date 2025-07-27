@@ -82,4 +82,16 @@ button {
         top: -50px !important; 
         right: -10px!important;
     }
+    .lightbox-caption {
+        bottom: -120px !important;
+    }
+    .lightbox-caption h3{
+      font-size: 1rem;
+    }
+}
+.seo-related{
+   font-size: 1px;
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
 }

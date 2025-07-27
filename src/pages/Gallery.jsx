@@ -5,11 +5,20 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import './Gallery.css';
 import { allBooks } from '../components/Hero/Book';
 import Pagination from '../components/Pagination/Pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { useRef } from 'react';
+
+
 
 const Gallery = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
   const totalPages = Math.ceil(allBooks.length / itemsPerPage);
+  const newArrivals = allBooks.filter(book => book.isNew); // Mark new books in your data
+  const swiperRef = useRef(null);
 
   const paginatedItems = allBooks.slice(
     (currentPage - 1) * itemsPerPage,
@@ -103,6 +112,66 @@ useEffect(() => {
   </a>
 </div>
 
+ <section className="new-arrivals">
+      <h2>New Arrivals</h2>
+      <p className="section-intro">
+        Just added to our collection! Explore the latest books now available.
+      </p>
+
+      <div className="new-arrivals-slider-wrapper">
+        <button
+          className="custom-swiper-button prev"
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <ChevronLeft size={20} />
+        </button>
+
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          spaceBetween={20}
+          slidesPerView={1.2}
+          breakpoints={{
+            640: { slidesPerView: 2.2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+          style={{ paddingBottom: '30px' }}
+        >
+          {newArrivals.map((image) => (
+            <SwiperSlide key={image.id}>
+              <div
+                className="gallery-item"
+                onClick={() => setSelectedImage(image)}
+                data-badge={image.isNew ? "NEW" : ""}
+              >
+                {(!loadedImages[image.id] || loading) && <Skeleton height="100%" />}
+                <img
+                  src={image.cover}
+                  alt={image.title}
+                  onLoad={() => handleImageLoad(image.id)}
+                  style={{ display: loadedImages[image.id] ? 'block' : 'none' }}
+                />
+                <div className="gallery-item-overlay">
+                  <h3>{image.title}</h3>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <button
+          className="custom-swiper-button next"
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <ChevronRight size={20} />
+        </button>
+      </div>
+    </section>
+
+
+        <h2>All Books</h2>
       <div className="gallery-grid">
         {paginatedItems.map((image) => (
           <div

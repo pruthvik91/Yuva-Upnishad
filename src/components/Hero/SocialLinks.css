@@ -44,6 +44,8 @@
 }
 @media (max-width: 768px) {
   .hero .social-links-wrapper{
-    left: 19%;
+    left: 50%;
+    top:-12%;
+    transform: translateX(-50%);
   }
 }

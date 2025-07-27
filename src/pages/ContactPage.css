@@ -65,7 +65,11 @@
 .contact-container .form-group input:focus-visible,.contact-container .form-group textarea:focus-visible {
     outline: none !important;
 }
+.contact-form-section .form-group label{
+    color: white;
 
+
+}
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: #1a374d;

@@ -1,7 +1,7 @@
 import './Logo.css';
 
 // eslint-disable-next-line react/prop-types
-const Logo = ({ src = 'Logo.svg', alt = 'Yuva Upnishad Publication Logo', className = 'logo-image' }) => {
+const Logo = ({ src = '/yuvaassets/Logo.svg', alt = 'Yuva Upnishad Publication Logo', className = 'logo-image' }) => {
   return (
     <div className="logo">
       <a href="/" className="logo-link">
